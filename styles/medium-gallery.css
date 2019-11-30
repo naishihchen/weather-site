@@ -1,0 +1,41 @@
+@media only screen and (min-width: 40em) {
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+        background-color: #bad0b9;
+        height: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .nav li:first-child {
+        display: none;
+    }
+
+    .nav li {
+        display: block;
+    }
+
+    #weather-gallery {
+      display: grid;
+      grid-template-columns: 400px 400px;
+      grid-gap: 20px;
+    }
+
+    .weather-image {
+      width: 100%;
+    }
+
+    .weather-image img {
+      width: 100%;
+    }
+
+  }

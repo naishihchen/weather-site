@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="styles/weather-sites.css" rel="stylesheet">
+        <link href="styles/medium.css" rel="stylesheet">
+        <link href="styles/large.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Forecast Friends Homepage</title>
+        <meta name="description" content="Website Project for BYUI CIT230 Class">
+        <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+        <script src="js/time.js"></script>
+        <script src="js/windchill.js"></script>
+        <script src="js/toggle-menu-script.js"></script>
+        <script src="js/towncards.js"></script>
+    </head>
+    <body onload="getTime(); getWindChill();">
+        <header>
+            <div id="name-and-slogan">
+                <h1>Forecast Friend</h1>
+                <i>In fair or foul weather</i>
+            </div>
+            <img alt="Forecast Friends Logo" src="images/ForecastFriendsLogo.png" id="logo">
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="#" onclick="toggleMenu()">&#9776;</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="preston.html">Preston</a></li>
+                <li><a href="soda_springs.html">Soda Springs</a></li>
+                <li><a href="fish_haven.html">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="cards">  </div>
+            <div id="events"></div>
+        </main>
+        <footer>
+            <div>
+                <p>&copy; <span id="year"></span> | Nai Shih Chen | Oregon |&nbsp;<a href="">BYUI Online Learning</a></p>
+            </div>
+            <div>
+                <p>Last Updated: <span id="fullDate"></span></p>
+            </div>
+        </footer>
+    </body>
+</html>

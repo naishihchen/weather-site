@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="styles/weather-sites.css" rel="stylesheet">
+        <link href="styles/medium.css" rel="stylesheet">
+        <link href="styles/large.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Naomi's Site</title>
+        <meta name="description" content="Website Project for BYUI CIT230 Class">
+        <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+        <script src="js/time.js"></script>
+        <script src="js/windchill.js"></script>
+        <script src="js/toggle-menu-script.js"></script>
+        <script src="js/ratingbar.js"></script>
+    </head>
+    <body onload="getTime(); getWindChill();">
+        <header>
+            <div id="name-and-slogan">
+                <h1>Forecast Friend</h1>
+                <i>In fair or foul weather</i>
+            </div>
+            <img alt="Forecast Friends Logo" src="images/ForecastFriendsLogo.png" id="logo">
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="#" onclick="toggleMenu()">&#9776;</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="preston.html">Preston</a></li>
+                <li><a href="soda_springs.html">Soda Springs</a></li>
+                <li><a href="fish_haven.html">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="wrap">
+            <form action="thanks.html" method="get">
+                <fieldset class="form1">
+                    <legend class="font">
+                    Your Details:
+                    </legend>
+                        <label>Name: <input type="text" name="name" pattern="[A-Za-z ]{5,}" placeholder="Full Name" required></label>
+                        <br>
+                        <label>E-Mail:<input type="email" name="email" placeholder="user@email.com"></label>
+                        <br>
+                        <label>Phone: <input type="tel" name="phone" placeholder="###-###-####" required></label>
+                        <br>
+                </fieldset>
+                 <br>
+                <fieldset class="form2">
+                    <legend class="font">
+                    Weather information:
+                    </legend>
+                        <p><label>Zipcode: <input type="number" name="zipcode" required></label></p>
+                        <p><label>Storm Date: <input type="date" name="storm date"></label></p>
+                        <p><label>Storm Type: <input name="browsers" list="browserlist"></label></p>
+                        <datalist id="browserlist">
+                            <option value="Flash Flood">
+                            <option value="Hail">
+                            <option value="Hurricane">
+                            <option value="Thunderstorm">
+                            <option value="Tornado">
+                        </datalist>
+                        <p><label>Storm Severity: <input name="severity" type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                        <span id="ratingvalue">5</span></label>
+                        </p>
+                        <p><label>Storm Region:
+                        <select name="Storm Region">
+                        <option value="Select Region">Select Region ...</option>
+                        <option value="Preston">Preston</option>
+                        <option value="Soda Springs">Soda Springs</option>
+                        <option value="Fish Haven">Fish Haven</option>
+                        </select> </label>
+                        </p>
+                        <p><label>User in-danger level: </label>
+                        <label for="yes">Yes<input type="radio" id="yes" name="answer" value="Yes" checked></label>
+                        <label for="maybe">Maybe<input type="radio" id="maybe" name="answer"  value="maybe"></label>
+                        <label for="no">No<input type="radio" id="no" name="answer"  value="no"></label>
+                        </p>
+                        <p>
+                        <label>Comments<br>
+                        <textarea name="comments" cols="50" rows="6" placeholder=" Enter your Comments..."></textarea></label>
+                        </p>
+                </fieldset>
+            <div class="submit"><input type="submit" name="submit" value="Submit information"></div>
+            </form>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>&copy; <span id="year"></span> | Nai Shih Chen | Oregon |&nbsp;<a href="">BYUI Online Learning</a></p>
+                    <br>
+            </div>
+            <div>
+                <p>Last Updated: <span id="fullDate"></span></p><br>
+            </div>
+        </footer>
+    </body>
+</html>

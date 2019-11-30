@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="styles/weather-sites.css" rel="stylesheet">
+        <link href="styles/medium.css" rel="stylesheet">
+        <link href="styles/large.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Naomi's Site</title>
+        <meta name="description" content="Website Project for BYUI CIT230 Class">
+        <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+        <script src="js/time.js"></script>
+        <script src="js/windchill.js"></script>
+        <script src="js/toggle-menu-script.js"></script>
+        <script src="js/ratingbar.js"></script>
+    </head>
+    <body onload="getTime(); getWindChill();">
+        <header>
+            <div id="name-and-slogan">
+                <h1>Forecast Friend</h1>
+                <i>In fair or foul weather</i>
+            </div>
+            <img alt="Forecast Friends Logo" src="images/ForecastFriendsLogo.png">
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="#" onclick="toggleMenu()">&#9776;</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="preston-7.html">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="#">Storm Center</a></li>
+                <li><a href="gallery-7.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="wrap">
+              <p>Thanks so much for submitting your information. Your contribution to the site is greatly appreciated.</p>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>&copy; <span id="year"></span> | Nai Shih Chen | Oregon |&nbsp;<a href="">BYUI Online Learning</a></p>
+                    <br>
+            </div>
+            <div>
+                <p>Last Updated: <span id="fullDate"></span></p><br>
+            </div>
+        </footer>
+    </body>
+</html>
