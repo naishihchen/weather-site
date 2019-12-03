@@ -39,6 +39,26 @@ h1 {
     font-size: 200%;
 }
 
+/*gallery css*/
+picture img {
+    width: 125px;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+
+picture img[data-src] {
+  filter: blur(0.2em);
+}
+
+.weather-image {
+  width: 100%;
+}
+
+.weather-image img {
+  width: 100%;
+}
+/*end gallery css*/
+
 #name-and-slogan h1 {
     font-size: 2em;
     margin: 0;
@@ -55,7 +75,7 @@ h1 {
     justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     padding-left: 5px;
     padding-right: 5px;
     text-align: center;
@@ -132,6 +152,10 @@ main {
   align-items: center;
 }
 
+span {
+    text-transform: capitalize;
+}
+
 #forecast {
     display: none;
 }
@@ -147,6 +171,14 @@ main {
     display: flex;
     flex-direction: column;
 
+}
+
+#events {
+    background-color: #bad0b9; 
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {

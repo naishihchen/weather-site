@@ -7,15 +7,15 @@
         <link href="styles/medium.css" rel="stylesheet">
         <link href="styles/large.css" rel="stylesheet">
         <link rel="shortcut icon" href="favicon.ico">
-        <title>Naomi's Site</title>
+        <title>Preston</title>
         <meta name="description" content="Website Project for BYUI CIT230 Class">
         <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
         <script src="js/time.js"></script>
-        <script src="js/windchill.js"></script>
         <script src="js/toggle-menu-script.js"></script>
         <script src="js/weatherapi.js"></script>
+        <script src="js/windchill.js"></script>
     </head>
-    <body onload="getTime(); getWindChill();">
+    <body onload="getTime();">
         <header>
             <div id="name-and-slogan">
                 <h1>Forecast Friend</h1>
@@ -44,41 +44,41 @@
                      src="images/franklin_srcset-min_1380.jpg" alt="town picture">
                     <div id="weather-summary">
                       <h3>Weather Summary</h3>
-                      <p>Currently: Sunny</p>
-                      <p>Current Temperature: <span id="current-temp"></span>&deg; F</p>
+                      <p>Currently: <span id="current-weather"></span></p>
+                      <p>Current Temperature: <span id="current-temp">3</span>&deg; F</p>
                       <p id="windchill"></p>
                       <p>Humidity: <span id="humidity"></span>%</p>
-                      <p>Wind Speed: <span id="wind-speed"></span> mph</p>
+                      <p>Wind Speed: <span id="wind-speed">3</span> mph</p>
                     </div>
                 </div>
                 <div class="town-options" id="forecast">
                     <h3>5 Day Weather Forecast</h3>
                     <table>
                         <tr>
-                            <th>Mon</th>
-                            <th>Tue</th>
-                            <th>Wed</th>
-                            <th>Thu</th>
-                            <th>Fri</th>
+                            <th><span id="day1">here?</span></th>
+                            <th><span id="day2"></span></th>
+                            <th><span id="day3"></span></th>
+                            <th><span id="day4"></span></th>
+                            <th><span id="day5"></span></th>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="5-day-temp">
                                 <img src="images/sun-icon.png" alt="sun icon">
                                 <p>90&#176; F</p>
                             </td>
-                            <td>
+                            <td class="5-day-temp">
                                 <img src="images/sun-icon.png" alt="sun icon">
                                 <p>89&#176; F</p>
                             </td>
-                            <td>
+                            <td class="5-day-temp">
                                 <img src="images/sun-icon.png" alt="sun icon">
                                 <p>88&#176; F</p>
                             </td>
-                            <td>
+                            <td class="5-day-temp">
                                 <img src="images/sun-icon.png" alt="sun icon">
                                 <p>87&#176; F</p>
                             </td>
-                            <td>
+                            <td class="5-day-temp">
                                 <img src="images/sun-icon.png" alt="sun icon">
                                 <p>86&#176; F</p>
                             </td>
@@ -86,9 +86,58 @@
                     </table>
                 </div>
                 <div class="town-options" id="article">
-                    <img srcset="images/action-adult-celebration-6050_650.jpg, images/action-adult-celebration-6050_1057.jpg 2x, images/action-adult-celebration-6050_1380.jpg 3x" src="images/action-adult-celebration-6050_650.jpg" alt="picnic image" id="picnic-image">
-                    <h3>Founder Day Fiasco</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img srcset="images/action-adult-celebration-6050_650.jpg, 
+                    images/action-adult-celebration-6050_1057.jpg 2x, 
+                    images/action-adult-celebration-6050_1380.jpg 3x" 
+                    src="images/action-adult-celebration-6050_650.jpg" 
+                    alt="picnic image" id="picnic-image">
+                    <h3>Why Going on a Picnic is Good for Your Family</h3>
+                    <p>Putting together a family picnic can be as simple as stopping by a local bakery to pick up some gourmet sandwiches and heading to the nearest canyon, mountain or park. Area residents are blessed with an abundance of scenic options just a few minutes’ drive away.
+                    <br>
+                    <br>
+                    Whether you picnic regularly with your family or it has been awhile since you availed yourself of the opportunity, there are plenty of reasons to go again soon. Here are a few: 
+                    <br>
+                    <br>
+                    <strong>Family bonding</strong>
+                    <br>
+                    <br>
+                    With so much going on in people’s lives, there seem to be few opportunities where family members can be together and focus on enjoying each other’s company. A picnic provides a perfect opportunity. “Staying engaged with your family and friends can help build stronger bonds and foster warmth, security and love, as well as feelings of belonging,” notes healthfitnessrevolution.com.
+                    <br>
+                    <br>
+                    <strong>Improved mental health</strong>
+                    <br>
+                    <br>
+                    Research verifies spending time in a natural setting is good for mental health. For example, a study published by the National Academy of Sciences found participants who spent 90 minutes in a natural environment reported lower levels of anxiety and reduced neural activity in the subgenual prefrontal cortex, an area of the brain associated with mental illness.
+                    <br>
+                    <br>
+                    “The researchers noted that increased urbanization closely correlates with increased instances of depression and other mental illness,” reports a Collective Evolution articleabout the research. “Taking the time to regularly remove ourselves from urban settings and spend more time in nature can greatly benefit our psychological (and physical) well-being.”
+                    <br>
+                    <br>
+                    <strong>Eating together helps children</strong>
+                    <br>
+                    <br>
+                    Numerous studies demonstrate a positive connection between family meals and better behavior by children. As USA Today explains, family dinners appear to help children avoid risky behaviors and might even improve school performance.
+                    <br>
+                    <br>
+                    <strong>Build traditions</strong>
+                    <br>
+                    <br>
+                    Children want to feel they belong to something. They also feel secure with familiarity and routine. When parents establish family rituals such as summer picnics in the mountains, it creates a sense of belonging and emotional support. In his book "The Intentional Family: Simple Rituals to Strengthen Family Ties," William Doherty, director of marriage and family therapy at the University of Minnesota, explains family traditions help children build a set of values they can use throughout their lives.
+                    <br>
+                    <br>
+                    <strong>Escape electronic distractions</strong>
+                    <br>
+                    <br>
+                    When computers, phones, tablets and other electronic devices have too much going on, their systems benefit from a reboot. The same is true for people of all ages. Too many activities and too much stress can bog down minds and spirits. A picnic up a canyon without cellphones or other electronics is a great way to connect with your internal operating system and to reboot your energy and intellect.
+                    <br>
+                    <br>
+                    <strong>Make it easy</strong>
+                    <br>
+                    <br>
+                    The best picnics are simple. Instead of trying to cook a meal on a dirty charcoal stove at a designated picnic site, opt for precooked foods you can eat with your hands. One idea would be to visit a local bakery for delicious breads, rolls and desserts. Add some cheese, fresh fruits and vegetables, and you have a meal that will satisfy most family members. If you want something more substantial, many of those bakeries also offer specialty sandwiches you don’t have to make yourself. Either way it’s a meal that doesn’t require lots of preparation or cleanup.
+                    <br>
+                    <br>
+                    With warmer, beautiful weather finally here, this is the perfect time to treat yourself and your family to an outdoor eating experience. Make a commitment to go often this summer and see if you don’t reap some great benefits as a result. Source: https://www.hjnews.com/maxread/oldgrist/why-going-on-a-picnic-is-good-for-your-family/article_e4afb1be-1c4c-11e6-8ae6-4f9f6bae34b9.html</p>
                 </div>
                 <div class="town-options" id="contact-info">
                     <img src="images/preston-idaho.jpg" alt="map image" id="map-image">

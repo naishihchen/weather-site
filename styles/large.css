@@ -1,8 +1,7 @@
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 60em) {
 
     .nav {
         justify-content: space-evenly;
-        height: 50px;
         align-content: center;
         align-items: center;
     }
@@ -17,8 +16,35 @@
 
     .cards {
         display: grid;
-        grid-template-columns: 360px 360px 360px;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 5px;
+    }
+
+    section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #bad0b9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section:nth-child(2) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /*gallery css*/
+    #weather-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+    /*end gallery css*/
+
+    .weather-div:hover {
+      box-shadow: 5px 10px;
     }
 
     #forecast {

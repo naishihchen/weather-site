@@ -11,11 +11,11 @@
         <meta name="description" content="Website Project for BYUI CIT230 Class">
         <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
         <script src="js/time.js"></script>
-        <script src="js/windchill.js"></script>
         <script src="js/toggle-menu-script.js"></script>
         <script src="js/weatherapi.js"></script>
+        <script src="js/windchill.js"></script>
     </head>
-    <body onload="getTime(); getWindChill();">
+    <body onload="getTime();">
         <header>
             <div id="name-and-slogan">
                 <h1>Forecast Friend</h1>
@@ -38,10 +38,13 @@
             <div id="weather-content">
                 <h2>Fish Haven, Idaho</h2>
                 <div class="town-options" id="hero">
-                    <img srcset="images/franklin_srcset-min_650.jpg 1x, images/franklin_srcset_min-1074.jpg 2x, images/franklin_srcset-min_1380.jpg 3x" src="images/franklin_srcset-min_650.jpg" alt="town picture">
+                    <img srcset="images/fish-haven.jpg,
+                      images/fish-haven.jpg 2x,
+                      images/fish-haven.jpg 3x" 
+                      src="images/fish-haven.jpg" alt="town picture">
                     <div id="weather-summary">
                       <h3>Weather Summary</h3>
-                      <p>Currently: Sunny</p>
+                      <p>Currently: <span id="current-weather"></span></p>
                       <p>Current Temperature: <span id="current-temp"></span>&deg; F</p>
                       <p id="windchill"></p>
                       <p>Humidity: <span id="humidity"></span>%</p>
@@ -83,9 +86,153 @@
                     </table>
                 </div>
                 <div class="town-options" id="article">
-                    <img srcset="images/action-adult-celebration-6050_650.jpg 1x, images/action-adult-celebration-6050_1074.jpg 2x, images/action-adult-celebration-6050_1380.jpg 3x" src="images/action-adult-celebration-6050_650.jpg" alt="picnic image" id="picnic-image">
-                    <h3>Founder Day Fiasco</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img srcset="images/camping.jpg, 
+                    images/camping.jpg 2x, 
+                    images/camping.jpg 3x" 
+                    src="images/camping.jpg" 
+                    alt="picnic image" id="picnic-image">
+                    <h3>Popular Idaho Campsites Grow Increasingly Harder to Book</h3>
+                    <p>BOISE, Idaho (AP) — After years of trying and failing to book sites at Idaho's more popular campgrounds, some people have just given up.
+                    <br>
+                    <br>
+                    The campsites can be reserved through Recreation.gov, the vendor that handles booking and permitting for the Forest Service, Bureau of Land Management, National Park Service and more.
+                    <br>
+                    <br>
+                    Reservations at many campgrounds open up on a rolling basis — six months ahead of time for individual sites and a year ahead of time for group sites. That means summer dates often first become available in winter. At popular Idaho campgrounds like those at Redfish Lake, it's impossible to know how many hopeful campers are vying for the sites on Recreation.gov.
+                    <br>
+                    <br>
+                    While a select few campers will succeed, others will scramble to add sites and dates to their online shopping carts, only to be met with a message declaring that all of the sites already have sold out within seconds, the Idaho Statesman reports.
+                    <br>
+                    <br>
+                    "I've quit trying to make reservations at Redfish," Roxann Jensen wrote on a Statesman Facebook prompt about booking campsites. "I gave up after experiencing 'no spaces available' year after year after year. I'm totally disgusted with this."
+                    <br>
+                    <br>
+                    Janelle Smith knows the frustration. Even she hasn't been able to snag a spot at Redfish, and as a spokeswoman for Recreation.gov, she's no stranger to the website's reservation system.
+                    <br>
+                    <br>
+                    "When you can't get a site for years running and it sells out in minutes, we get that that's frustrating," said Smith, who is based in Boise.
+                    <br>
+                    <br>
+                    Theories abound on why those campgrounds book up in the blink of an eye. Smith and other experts said they can't know for sure why one camper gets a spot over another, but the answer could be simple: Some campgrounds are just that in demand.
+                    <br>
+                    ___
+                    <br>
+                    <strong>WHY IS IT SO HARD TO BOOK IDAHO CAMPSITES?</strong>
+                    <br>
+                    <br>
+                    On a prompt in the Idaho Nature Lovers Facebook group, campers from across the site shared their experiences using Recreation.gov.
+                    <br>
+                    <br>
+                    Patsy Diann Secrist said she's heard of campers who book an entire week at a site starting on a Monday.
+                    <br>
+                    <br>
+                    "They go to the website 6 months in advance and reserve from the Monday before through the desired weekend," she wrote. "Then later on cancel the Monday through Thursday....weekend reserved."
+                    <br>
+                    <br>
+                    Some said they deliberately avoid popular spots because they're so crowded, while others said they've simply given up. Still other commenters said they've noticed the rush for sites like Bull Trout Lake, Redfish Lake or Deadwood Lookout but have managed to snag a reservation.
+                    <br>
+                    <br>
+                    "Have been able to book campsites in the past ... at Glacier View Campground at Redfish Lake but only at 1:00 a.m. 6 months in advance," wrote Shawn Murdock. (In most cases, Recreation.gov releases campsites at 8 a.m. Mountain Time six months ahead of the booking date.)
+                    <br>
+                    <br>
+                    "One of the problems is that it is a hot spot that everyone tries to go because it's the one place everyone talks about and it's the same place everyone returns year after year," Murdock said.
+                    <br>
+                    <br>
+                    Julie Thomas, spokeswoman for the Sawtooth National Forest where Redfish is located, said the forest is busier than ever this year.
+                    <br>
+                    <br>
+                    "Redfish Lake is always a favorite," she said in a phone interview, adding that it often sells out for the entire summer.
+                    <br>
+                    <br>
+                    Some have pointed the finger at bots, saying the same technology that scoops up event tickets for marked-up resale is responsible for the hard-to-book campgrounds, though there's no evidence that the sites are being relisted and sold elsewhere.
+                    <br>
+                    <br>
+                    "Certainly bots exist in any sort of reservation systems," Smith said in an interview. "They're out there. We use Captcha and developers monitor for bots and arrest those as best they can.
+                    <br>
+                    <br>
+                    "It's something we're working on," she added. "We're implementing industry best practices."
+                    <br>
+                    <br>
+                    Smith said it's more likely that some users are just faster than others at snagging their ideal spot. It also could be another symptom of Idaho's recent population boom that's affecting everything from traffic to property taxes.
+                    <br>
+                    ___
+                    <br>
+                    <strong>'900 PEOPLE WANT 30 SITES'</strong>
+                    <br>
+                    <br>
+                    Tom Zadick is the regional recreation manager for Recreation Resource Management of America, which contracts with the Forest Service to manage campsites in Arizona, Colorado and Idaho. His team manages campgrounds in the Sawtooth National Recreation Area, where Redfish Lake's popular Glacier View, Outlet and Point reservation campsites are.
+                    <br>
+                    <br>
+                    He knows how difficult it can be to find an opening at one of the campgrounds.
+                    <br>
+                    <br>
+                    "I've heard the horror stories of entire families sitting in a room with a dozen computers, hitting refresh (on the website) trying to book something and maybe one person will get it," he said.
+                    <br>
+                    <br>
+                    Zadick said the hard-to-book campsites are the result of "a perfect storm" of growing popularity, limited supply and the occasional person who abuses the system by reselling a site or overstaying their reservation.
+                    <br>
+                    <br>
+                    "We have more demand than supply," Zadick said in a phone interview. "The sites at Glacier View, Outlet and Point are some of the most requested in the United States. When 900 people want 30 sites, a lot of people are going to be turned away."
+                    <br>
+                    <br>
+                    According to Zadick, the popular campgrounds are world famous, drawing visitors from out of state and even as far as Europe and Asia, though he said about 50 percent of campers at Redfish are Idahoans. He compared the level of demand at Redfish to that at Lake Tahoe — except Tahoe has far more sites to accommodate that demand. And the traffic is spilling from Redfish Lake to the surrounding Sawtooth National Forest.
+                    <br>
+                    <br>
+                    "We're seeing visitation numbers three times what they were a few years ago," Zadick said. "Campsites that never used to fill up are full from Wednesday night through the weekends."
+                    <br>
+                    <br>
+                    And when that many people are vying for a few spots, things can get tense, especially at the handful of nearby walk-in campsites.
+                    <br>
+                    <br>
+                    "We've literally had people almost in fistfights at Sockeye," Zadick said.
+                    <br>
+                    <br>
+                    He said some guests are "literally trolling the (walk-in) campgrounds, and the second someone leaves, they jump in." Others sleep in their cars near walk-up campgrounds in hopes of securing a spot when another group leaves the next morning.
+                    <br>
+                    <br>
+                    Zadick said his company is working with the Forest Service and Recreation.gov to find a solution for the overcrowding and competition. There's a chance all the campgrounds in the Redfish Lake area may become reservation sites. Other popular camping areas have adopted lottery systems for reservations.
+                    <br>
+                    <br>
+                    "There's various opinions around how we can correct (the issues)," Zadick said. "I don't know that there's any easy solution."
+                    <br>
+                    <br>
+                    Before any potential changes are made, they'll go through a public comment period.
+                    <br>
+                    <br>
+                    "Frustrated comments don't do any good," Zadick said. "We know it's not a perfect system. The public could help us help them. We're open to suggestions and constructive criticism."
+                    <br>
+                    ___
+                    <br>
+                    <strong>HOW TO BOOK IDAHO CAMPSITES</strong>
+                    <br>
+                    <br>
+                    There's no magic bullet for booking your ideal campground, but Smith and Boise National Forest spokeswoman Venetia Gempler offered a few tips that could make it easier to reserve a spot:
+                    <br>
+                    <br>
+                    Come prepared: Smith advised doing a "dry run" of the Recreation.gov website so you're familiar with the steps for making a reservation. The site switched to a new vendor last October and was completely overhauled, so it may look or operate differently than the last time you used it.
+                    <br>
+                    <br>
+                    Smith also said it's helpful to know what site you're hoping to get and which dates you want to book.
+                    <br>
+                    <br>
+                    "I'm not the kind of person who books my summer down to the day six months out, but certainly people do," Smith said. "Be ready to just book right away."<br>
+                    <br>
+                    Be flexible: While most work schedules make weekend camping convenient, that also means weekends are the busiest. If you're willing to schedule a trip during the week, you may have better luck. In addition, Smith pointed out that popular holidays like the Fourth of July and Memorial Day weekend are also more difficult to book.
+                    <br>
+                    <br>
+                    Have a backup plan: Keep in mind four or five sites that you'd be alright with camping at so you can book there if your first choice falls through.
+                    <br>
+                    <br>
+                    "We only have so many sites," said Thomas, the Sawtooth National Forest spokeswoman. "The only advice we can give is ... you might have to have some other options."
+                    <br>
+                    <br>
+                    If you don't get your preferred site, consider exploring. Dispersed camping is allowed on public land for campers who don't mind giving up amenities like toilets. There are also many campgrounds across the state that don't sell out, as well as walk-in campsites without reservations.
+                    <br>
+                    <br>
+                    Smith also pointed to Recreation.gov's trip building tool, which lets you choose a starting point and destination and see which campgrounds or experiences are available along the way.
+                    <br>
+                    <br>
+                    And if you just have to have that campsite on the shore of Redfish Lake, you could try using bots in your favor. Websites like Campnab will scrape Recreation.gov regularly and send you alerts if a date opens up (for a fee, of course), and similar browser extensions exist, too. Source: https://www.usnews.com/news/best-states/idaho/articles/2019-09-07/popular-idaho-campsites-grow-increasingly-harder-to-book</p>
                 </div>
                 <div class="town-options" id="contact-info">
                     <img src="images/preston-idaho.jpg" alt="map image" id="map-image">

@@ -11,11 +11,11 @@
         <meta name="description" content="Website Project for BYUI CIT230 Class">
         <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
         <script src="js/time.js"></script>
-        <script src="js/windchill.js"></script>
         <script src="js/toggle-menu-script.js"></script>
         <script src="js/weatherapi.js"></script>
+        <script src="js/windchill.js"></script>
     </head>
-    <body onload="getTime(); getWindChill();">
+    <body onload="getTime();">
         <header>
             <div id="name-and-slogan">
                 <h1>Forecast Friend</h1>
@@ -38,10 +38,13 @@
             <div id="weather-content">
                 <h2>Soda Springs, Idaho</h2>
                 <div class="town-options" id="hero">
-                    <img srcset="images/franklin_srcset-min_650.jpg 1x, images/franklin_srcset_min-1074.jpg 2x, images/franklin_srcset-min_1380.jpg 3x" src="images/franklin_srcset-min_650.jpg" alt="town picture">
+                    <img srcset="images/soda-springs.jpg,
+                     images/soda-springs.jpg 2x,
+                     images/soda-springs.jpg 3x" 
+                     src="images/soda-springs.jpg" alt="town picture">
                     <div id="weather-summary">
                       <h3>Weather Summary</h3>
-                      <p>Currently: Sunny</p>
+                      <p>Currently: <span id="current-weather"></span></p>
                       <p>Current Temperature: <span id="current-temp"></span>&deg; F</p>
                       <p id="windchill"></p>
                       <p>Humidity: <span id="humidity"></span>%</p>
@@ -83,9 +86,88 @@
                     </table>
                 </div>
                 <div class="town-options" id="article">
-                    <img srcset="images/action-adult-celebration-6050_650.jpg 1x, images/action-adult-celebration-6050_1074.jpg 2x, images/action-adult-celebration-6050_1380.jpg 3x" src="images/action-adult-celebration-6050_650.jpg" alt="picnic image" id="picnic-image">
-                    <h3>Founder Day Fiasco</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img srcset="images/hiking.jpg,
+                    images/hiking.jpg 2x, 
+                    images/hiking.jpg 3x" 
+                    src="images/hiking.jpg" 
+                    alt="hiking image" id="picnic-image">
+                    <h3>Take A Hike!</h3>
+                    <p>On sunny, warm days like we had last week, I almost feel like I’m experiencing spring for the first time.
+                    <br>
+                    <br>
+                    After a very long winter, I’m cherishing every ounce of sunshine, the fresh tang of bitterbrush ready to burst with yellow blooms — and pollen. And I’m enjoying seeing the Boise Foothills turn the deepest shade of green from all of the April showers.
+                    <br>
+                    <br>
+                    <strong>Five Mile-Watchman-Three Bears Loop</strong>
+                    <br>
+                    <br>
+                    On the occasion of my stepson’s birthday, Wendy, Tom and I did a 6-mile loop hike in the east side of the foothills on Saturday. The Five Mile-Watchman-Three Bears Loop is bursting with color, birds and flowers right now, and will get even better in the coming weeks of May. The hike climbs on a moderate grade along Five Mile Creek, and then after a steep ascent, the trail merges with Watchman Trail, a beautifully contoured trail which affords big views of the eastern foothills and the city of Boise below.
+                    <br>
+                    <br>
+                    This is one of my all-time favorite foothills hikes because it’s got several creek-bottoms that you travel through in addition to the skyline views from the ridgetops. From the summit of the hike, you cap it off with a steep downhill to Three Bears junction, and then swoop back to Rocky Canyon Road on Three Bears.
+                    <br>
+                    <br>
+                    Our dogs, Huck and Cassie, were happy because of all the creek water. It’s a perfect place to go right now.
+                    <br>
+                    <br>
+                    I rated the Five Mile-Watchman-Three Bears loop as a strong intermediate hike in my book, "Boise Trail Guide: 95 Hiking and Running Routes Close to Home." It features about 1,000 feet of vertical gain. Kid-friendly (good for kids in backpacks, too). After you’re finished, you’ll feel like you’ve covered a huge amount of ground. The trail is popular with mountain bikers and trail-runners as well, so please watch for them and yield accordingly (uphill traffic has the right of way).
+                    <br>
+                    <br>
+                    Directions to trailhead: Go to east Boise and take Reserve Street to Shaw Mountain Road. Follow Shaw Mountain Road to the top of the grade, and go left on Rocky Canyon Road at the fork with Table Rock Road. Follow Rocky Canyon Road to the end of the pavement, and then about 2 miles up the road is the trailhead for Five Mile Creek. The hike starts and finishes here.
+                    <br>
+                    <br>
+                    Enjoy the spring weather and see if you can knock off three other entertaining hikes that I’d recommend this time of year.
+                    <br>
+                    <br>
+                    <strong>Station Creek</strong>
+                    <br>
+                    <br>
+                    The snow is melting just enough to bring the Station Creek hike into consideration. This is arguably the nicest, most scenic hike in the Boise National Forest near Garden Valley. It’s a 7-mile, out-and-back hike to the top of Bald Mountain. The hike features more than 2,000 feet of vertical gain, starting at a base elevation of 3,170 feet across from the Garden Valley Ranger Station and climbing to 5,122-foot Bald Mountain (optional). There are some extra up and downs along the way. Hiking time is about 4-5 hours. Pack a lunch for the summit.
+                    <br>
+                    <br>
+                    Another reason to do this hike: it's got a good trail the whole way, there's rarely any downfall, and you’re walking under park-like stands of ponderosa pine the whole way. It's a rare spot in the Boise National Forest that hasn't been burned.
+                    <br>
+                    <br>
+                    Getting there: Take Idaho 55 to Banks, turn right. Proceed past the town of Garden Valley to the Garden Valley Ranger Station. The Station Creek Trailhead is directly across the road from the ranger station.
+                    <br>
+                    <br>
+                    The road to the trailhead will veer off to the left of the highway before you reach the ranger station, coming from the west. There's public parking at the trailhead but no rest room. The Chevron station in Garden Valley is a great place to take a pit stop and stock up on last-minute supplies.
+                    <br>
+                    <br>
+                    <strong>Hillside to the Hollow</strong>
+                    <br>
+                    <br>
+                    Scaling back to a place for shorter hikes, Hillside to the Hollow in the North End of Boise has all kinds of options, and it’s bursting with wildflowers right now. This is a super dog-friendly destination in the foothills. You can take a casual stroll up Highlands Hollow by parking next to Healthwise off of Bogus Basin Road and walk about 1 mile up to a cool saddle, where you can see new homes encroaching on this open space reserve, and have the option of hiking to the top of the knoll to see a great view of the city, with fields of arrowleaf balsomroot all around you.
+                    <br>
+                    <br>
+                    It’s also possible to start from Hillside Junior High, park by the tennis courts, and hike up the hill to the top of the knoll from that side, or take a contour trail aptly called Buena Vista across the front of the reserve. You’ll see lots of different trails when you visit that add variety and spice to this jewel just minutes from downtown.
+                    <br>
+                    <br>
+                    <strong>Kepros Mountain</strong> 
+                    <br>
+                    <br>
+                    This is one of four Grand Slam Peaks close to Boise, and it’s free of snow now.
+                    <br>
+                    <br>
+                    Kepros is a 10-mile hike out and back, with more than 1,700 feet of elevation gain. The trailhead is at the first summit on Black’s Creek Road, heading northeast toward the South Fork Boise River and the tiny town of Prairie. We owe a debt of thanks to Boise guidebook author Tom Lopez for discovering the Grand Slam Peaks and sharing them with the Boise hiking community.
+                    <br>
+                    <br>
+                    I’ve logged all four of the Grand Slam peaks, and I’d say Kepros is one of the more strenuous of the four, but it’s not as steep as climbing Cervidae. I recommend hiking poles for this one. It starts out pretty steep right out of the chute. You’ll follow an old motorcycle trail that marches straight up the mountain to the west of the trailhead area. That's your trail. The route climbs 400 vertical feet to an initial saddle next to Three Point Mountain (optional side trip). And then the singletrack vectors off to the northwest, following a series of Camel's back ridgetops over to Peak 5380.
+                    <br>
+                    <br>
+                    As you go, you’ll notice a number of bypass trails along the route, short-cutting the main trail that goes over a bump on the ridge and then dives down the other side, losing most of the elevation. Ugh! The bypass trails are marked by rock cairns in some cases. But they do save you energy. You can thank Tom Lopez for those as well.
+                    <br>
+                    <br>
+                    It took me about an hour to reach Peak 5380 — actually I took the bypass trail to the right to avoid hitting the summit — and Mt. Kepros looked like a LONG ways away, even though it was only 2.5 miles. Worse, the road I would be following now to the north actually went downhill, losing elevation, and then I could see I would have to make up that elevation again to summit Kepros. Watch for bypass trails in these areas as well.
+                    <br>
+                    <br>
+                    It took me about another hour to summit Kepros (elev. 5,428) or two hours total at a brisk pace. My pointer Huck flushed several small groups of chukars and one big blue grouse along the way. That's always a rush to hear a big blue take off right next to you, scaring the holy hell out of you.
+                    <br>
+                    <br>
+                    The ridge walk to Kepros is really delightful. You can see Bogus Basin and Boise off to the west, the Boise National Forest to the north, the sparkling waters of Lucky Peak Reservoir down below, and the Trinities, all smothered in snow, off to the east. On a sunny afternoon, without much wind, it's just beautiful out there. The wildflowers on the ridge can be spectacular in May.
+                    <br>
+                    <br>
+                    Please see Tom Lopez's Grand Slam post online or my Grand Slam post online, or in "Boise Trail Guide" for more details about hiking the other three mountains in the series. The idea is to knock off all four summits as a warm-up for your summer hiking season in the Sawtooths, White Clouds, Big Lost Range, whatever. Source: https://www.idahopress.com/outdoors/take-a-hike/article_451a7cdd-5f0c-5c26-b135-8e3beebb1533.html</p>
                 </div>
                 <div class="town-options" id="contact-info">
                     <img src="images/preston-idaho.jpg" alt="map image" id="map-image">

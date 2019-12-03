@@ -2,7 +2,6 @@
 
     .nav {
         justify-content: space-evenly;
-        height: 50px;
         align-content: center;
         align-items: center;
     }
@@ -15,11 +14,33 @@
         display: block;
     }
 
-    /*.cards {
+    .cards {
         display: grid;
-        grid-template-columns: 500px 500px;
+        grid-template-columns: 1fr;
         grid-gap: 5px;
-    }*/
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    section:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    section img {
+        padding: 10px;
+    }
+
+    /*gallery css*/
+    #weather-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    /*end gallery css*/
 
     #forecast {
         background-color: white;
